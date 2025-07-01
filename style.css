@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+/* header */
+.nav-links {
+    background-color: #240046;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #eeeeee;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #6A0DAD;
+}
+
+
+.dark-theme {
+    --bg-color: #373535;
+    --text-color: #f5f5f5;
+}
+
+#toggleTheme {
+    position: fixed;
+    top: 85px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#toggleTheme:hover {
+    transform: scale(1.2);
+}
+
+
+/* hero section */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #6A0DAD, #690e4d);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 10px 0 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    ;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* about section */
+
+.about-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        display: block;
+    }
+
+}
+
+.about-section__content {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 60px;
+    max-width: 1100px;
+    padding: 20px;
+    margin: 10px 0 30px 0;
+}
+
+@media (max-width: 768px) {
+    .about-section__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .about-section__content {
+        margin-bottom: 1000px;
+    }
+
+}
+
+.about-section__avatar {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .about-section__avatar {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+.about-section__text {
+    font-weight: 400;
+    font-size: 22px;
+}
+
+/* skills section */
+
+.skills-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .skills-section {
+        margin-top: 200px;
+    }
+
+}
+
+.skills-section__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Сітка */
+.skills-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 50px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.skill-section__card {
+    color: #000000;
+    background-color: #f2f0f8;
+    border-radius: 16px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-section__card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Іконки Lucide */
+.skill-section__card i[data-lucide] {
+    width: 40px;
+    height: 40px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.skill-section__card p {
+    margin: 0;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* portfolio section */
+.portfolio {
+    padding: 80px 5px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #6A0DAD;
+}
+
+.project-content p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.project-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6A0DAD;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-content .btn:hover {
+    background-color: #8f3ed7;
+}
+
+/* tips section */
+.tips-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.tips-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #0057B8;
+
+}
+
+.tip-box {
+    font-size: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 700px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: opacity 0.5s ease;
+    min-height: 70px;
+    border-left: 8px solid #FFD700;
+
+}
+
+/* contact section */
+
+.contact {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    color: #6A0DAD;
+    margin-bottom: 12px;
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #fff;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: #f0e5ff;
+}
+
+.contact-item i[data-lucide] {
+    width: 24px;
+    height: 24px;
+    color: #6A0DAD;
+}
+
+/* footer */
+
+footer {
+    background-color: #240046;
+    /* темно-фіолетовий */
+    color: #eee;
+    padding: 25px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+}
+
+footer p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-button {
+    background-color: #6A0DAD;
+    /* яскравий фіолетовий */
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+    display: inline-block;
+}
+
+.footer-button:hover,
+.footer-button:focus {
+    background-color: #8f3ed7;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(143, 62, 215, 0.6);
+}
+
+@media (max-width: 480px) {
+    .footer-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
