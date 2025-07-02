@@ -8,6 +8,8 @@
     <title>WebFromScratch</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -21,43 +23,40 @@
                     <li><a href="#tips" class="nav-item">Натхнення</a></li>
                     <li><a href="#contact" class="nav-item">Контакти</a></li>
                 </ul>
-                <button id="toggleTheme" aria-label="Перемикнути тему">
-                    <span id="themeIcon">🌙</span>
-                </button>
 
             </nav>
         </section>
 
-        <section class="hero">
-            <div class="hero-content">
+        <section class="hero-section">
+            <div class="hero-section__content">
                 <h1>Andrii Vahniuk</h1>
                 <h2>Junior Web Developer</h2>
                 <p>⚡ Верстаю сучасні сайти з нуля до результату</p>
-                <div class="hero-buttons">
-                    <a href="#portfolio" class="btn">📂 Портфоліо</a>
-                    <a href="#contact" class="btn btn-secondary">📬 Зв'язатися</a>
+                <div class="hero-section__buttons">
+                    <a href="#portfolio" class="hero-section__btn">📂 Портфоліо</a>
+                    <a href="#contact" class="hero-section__btn hero-section__btn-secondary">📬 Зв'язатися</a>
                 </div>
             </div>
         </section>
     </header>
     <main>
         <section class="about-section" id="about">
-            <div class="container">
-                <div class="about-section__content">
-                    <div class="about-section__image">
-                        <img src="./images/about-image.jpg" alt="Andrii Vahniuk" class="about-section__avatar">
-                    </div>
-                    <div class="about-section__texts">
-                        <p class="about-section__text">Я 14-річний веб-розробник з України. Спеціалізуюсь на HTML, CSS,
-                            JS.
-                            Працюю над реальними проєктами з клієнтами. Навчаюсь щодня.</p>
-                        <p class="about-section__text">🎯 Мета — стати strong frontend до 2025
-                            🛠️</p>
-                        <p class="about-section__text">💻 Маю досвід роботи з адаптивною версткою, JavaScript, Git та
-                            Netlify</p>
-                    </div>
+
+            <div class="about-section__content">
+                <div class="about-section__image">
+                    <img src="./images/about-image.jpg" alt="Andrii Vahniuk" class="about-section__avatar">
+                </div>
+                <div class="about-section__texts">
+                    <p class="about-section__text">Я 14-річний веб-розробник з України. Спеціалізуюсь на HTML, CSS,
+                        JS.
+                        Працюю над реальними проєктами з клієнтами. Навчаюсь щодня.</p>
+                    <p class="about-section__text">🎯 Мета — стати strong frontend до 2025
+                        🛠️</p>
+                    <p class="about-section__text">💻 Маю досвід роботи з адаптивною версткою, JavaScript, Git та
+                        Netlify</p>
                 </div>
             </div>
+
 
         </section>
         <section class="skills-section" id="skills">
@@ -90,21 +89,21 @@
             </div>
         </section>
 
-        <section class="portfolio" id="portfolio">
+        <section class="portfolio-section" id="portfolio">
             <h2>Мої проєкти</h2>
-            <div class="portfolio-grid">
-                <div class="project-card">
+            <div class="portfolio-section__grid">
+                <div class="portfolio-section__card">
                     <img src="./images/justlearnit.png" alt="JustLearnIt сайт">
-                    <div class="project-content">
+                    <div class="portfolio-section__content">
                         <h3>JustLearnIt</h3>
                         <p>Сайт репетиторки англійської з адаптивом та слайдером.</p>
                         <a href="https://justlearnit-site.netlify.app" target="_blank" class="btn">Переглянути</a>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="portfolio-section__card">
                     <img src="./images/firstsite.png" alt="Портфоліо">
-                    <div class="project-content">
+                    <div class="portfolio-section__content">
                         <h3>Моє портфоліо</h3>
                         <p>Перший повноцінний сайт із анімаціями та секціями.</p>
                         <a href="https://andrii864.github.io/first-site/" class="btn">Переглянути</a>
@@ -116,35 +115,152 @@
 
         <section class="tips-section" id="tips">
             <h2>Натхнення з України</h2>
-            <div class="tip-box">
+            <div class="tips-section__box">
                 <p id="tip-text">"Свобода починається з тебе."</p>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <h2>Ціни</h2>
+            <p class="pricing-section__donate-info">
+                🎁 Перші <strong>3 сайти</strong> — за <strong>вільний донат</strong>!
+            </p>
+
+            <div class="pricing-section__pricing-wrapper">
+                <button class="pricing-section__arrow left">&#10094;</button>
+
+                <div class="pricing-section__pricing-track" id="pricingTrack">
+                    <div class="pricing-section__price-card">
+                        <div class="emoji">✨</div>
+                        <h3>Базовий</h3>
+                        <p>Сайт-візитка для себе або бізнесу</p>
+                        <p class="time">⏱ ~1 день</p>
+                        <p class="price">1500 ₴</p>
+                    </div>
+                    <div class="pricing-section__price-card">
+                        <div class="emoji">🚀</div>
+                        <h3>Стандарт</h3>
+                        <p>Адаптивний лендінг з блоками</p>
+                        <p class="time">⏱ ~2 дні</p>
+                        <p class="price">2500 ₴</p>
+                    </div>
+                    <div class="pricing-section__price-card">
+                        <div class="emoji">🌟</div>
+                        <h3>Преміум</h3>
+                        <p>Анімації, форма, оптимізація</p>
+                        <p class="time">⏱ ~3 дні</p>
+                        <p class="price">3500 ₴</p>
+                    </div>
+                </div>
+
+                <button class="pricing-section__arrow right">&#10095;</button>
             </div>
         </section>
 
 
 
-        <section class="contact" id="contact">
-            <h2>Контакти</h2>
-            <p class="contact-subtitle">Напиши мені у зручний спосіб</p>
 
-            <div class="contact-list">
-                <a href="mailto:andrii.devweb@gmail.com" class="contact-item">
+        <section class="contact-section" id="contact">
+            <h2>Контакти</h2>
+            <p class="contact-section__subtitle">Напиши мені у зручний спосіб</p>
+
+            <div class="contact-section__list">
+                <a href="mailto:andrii.devweb@gmail.com" class="contact-section__item">
                     <i data-lucide="mail"></i>
                     <span>andrii.devweb@gmail.com</span>
                 </a>
-                <a href="https://t.me/myewzy15" target="_blank" class="contact-item">
+                <a href="https://t.me/myewzy15" target="_blank" class="contact-section__item">
                     <i data-lucide="send"></i>
                     <span>@myewzy15</span>
                 </a>
-                <a href="https://www.instagram.com/andrii__webdev15" target="_blank" class="contact-item">
+                <a href="https://www.instagram.com/andrii__webdev15" target="_blank" class="contact-section__item">
                     <i data-lucide="instagram"></i>
                     <span>@andrii__webdev15</span>
                 </a>
-                <a href="tel:+380965795209" class="contact-item">
+                <a href="tel:+380965795209" class="contact-section__item">
                     <i data-lucide="phone"></i>
                     <span>+38 (096) 579-52-09</span>
                 </a>
             </div>
+
+
+
+            <label class="container">
+
+                <input type="checkbox" checked="checked" />
+                <div class="checkmark"></div>
+                <div class="torch">
+                    <div class="light-effect"></div>
+                    <div class="glow-effect"></div>
+                    <div class="particles">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="smoke">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="head">
+                        <div class="face top">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="face left">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="face right">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="stick">
+                        <div class="side side-left">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="side side-right">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
         </section>
 
     </main>
@@ -206,31 +322,43 @@
 
         }, 5000); // кожні 5 секунд
     </script>
-    <script>
-        const toggleButton = document.getElementById('toggleTheme');
-        const themeIcon = document.getElementById('themeIcon');
 
-        // Функція для встановлення іконки
-        function updateIcon(isDark) {
-            themeIcon.textContent = isDark ? '☀️' : '🌙';
+    <script>
+        const track = document.getElementById('pricingTrack');
+        const leftArrow = document.querySelector('.pricing-section__arrow.left');
+        const rightArrow = document.querySelector('.pricing-section__arrow.right');
+
+        let cardWidth = 0;
+        function updateCardWidth() {
+            const card = track.querySelector('.pricing-section__price-card');
+            cardWidth = card.offsetWidth + 32;
         }
 
-        // Натискання на кнопку
-        toggleButton.addEventListener('click', () => {
-            const isDark = document.body.classList.toggle('dark-theme');
-            updateIcon(isDark);
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        window.addEventListener('resize', updateCardWidth);
+        updateCardWidth();
+
+        let currentScroll = 0;
+
+        rightArrow.addEventListener('click', () => {
+            currentScroll += cardWidth;
+            track.scrollTo({ left: currentScroll, behavior: 'smooth' });
         });
 
-        // Завантаження теми при відкритті сторінки
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            const isDark = savedTheme === 'dark';
-            if (isDark) document.body.classList.add('dark-theme');
-            updateIcon(isDark);
+        leftArrow.addEventListener('click', () => {
+            currentScroll -= cardWidth;
+            if (currentScroll < 0) currentScroll = 0;
+            track.scrollTo({ left: currentScroll, behavior: 'smooth' });
         });
     </script>
 
+
+    <script>
+        const themeToggle = document.querySelector('.container input');
+
+        themeToggle.addEventListener('change', function () {
+            document.body.classList.toggle('dark-theme', this.checked);
+        });
+    </script>
 
 
 </body>
